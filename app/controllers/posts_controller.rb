@@ -10,6 +10,11 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+      #To set up the variable for our comment form
+      @comment = Comment.new
+      #can access this from set_post... @post = Post.find(params[:id])
+      # Returns an array with all comments that relate to the post
+      @comments = @post.comments
   end
 
   # GET /posts/new

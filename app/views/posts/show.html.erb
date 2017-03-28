@@ -17,3 +17,11 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+<%= render 'comments/form', comment: @comment %>
+
+<% @comments.each do |comment| %>
+  <p> <%= comment.user.email %> </p>
+  <p> <%= comment.created_at.strftime('%b %d, %Y') %> </p>
+  <p> <%= comment.content %> </p>
+
+<% end %>
