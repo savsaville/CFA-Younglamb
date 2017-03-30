@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'contact', to: "contact#index"
+
+  post 'contact', to: "contact#mail"
+
   resources :posts do
     resources :comments
   end
