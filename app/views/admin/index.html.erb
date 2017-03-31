@@ -1,0 +1,21 @@
+<h1>Administration Lamb</h1>
+<p>Where all good lambs go to administrate</p>
+
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Email</td>
+      <td>User Type</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.user_type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
