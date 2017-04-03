@@ -1,4 +1,6 @@
-function formatMoney(amount){
-  (amount).toFixed(2);
+function last(list){
+  var last_element = [list.length - 1];
+  return (last_element);
 }
-console.log((formatMoney)(100))
+
+console.log("last_element")
